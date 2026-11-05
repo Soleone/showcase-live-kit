@@ -1,0 +1,7 @@
+/* The house look for showcase's browser terminal: Geist for the page around the terminal. */
+@import url("https://cdn.jsdelivr.net/npm/@fontsource-variable/geist@5/index.css");
+
+body,
+#theme-button {
+  font-family: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+}

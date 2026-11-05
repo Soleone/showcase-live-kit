@@ -1,0 +1,32 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "live",
+  "homepage": "https://github.com/Soleone/showcase-live-kit",
+  "items": [
+    {
+      "name": "corners",
+      "type": "registry:component",
+      "title": "Live page corners",
+      "description": "The bottom corners of a live page: a demo control on the left, the way to the real app on the right, and a download button whose arrow drops on hover and that shrinks to its icon on small screens.",
+      "dependencies": ["motion"],
+      "registryDependencies": ["button", "tooltip"],
+      "files": [
+        {
+          "path": "registry/live/corners/index.ts",
+          "type": "registry:component",
+          "target": "components/live/corners/index.ts"
+        },
+        {
+          "path": "registry/live/corners/corner.tsx",
+          "type": "registry:component",
+          "target": "components/live/corners/corner.tsx"
+        },
+        {
+          "path": "registry/live/corners/download-button.tsx",
+          "type": "registry:component",
+          "target": "components/live/corners/download-button.tsx"
+        }
+      ]
+    }
+  ]
+}

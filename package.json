@@ -1,0 +1,19 @@
+{
+  "name": "showcase-live-kit",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/terminal-themes.ts && shadcn build",
+    "check": "shadcn build && git diff --exit-code -- public/r terminal"
+  },
+  "devDependencies": {
+    "shadcn": "^4.23.0"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.16.1",
+      "onFail": "download"
+    }
+  }
+}
