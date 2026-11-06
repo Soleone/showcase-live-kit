@@ -39,10 +39,11 @@ showcase's browser terminal takes a `skin`. Point `demo/browser/terminal.json` a
 "skin": "https://raw.githubusercontent.com/Soleone/showcase-live-kit/main/terminal"
 ```
 
-It brings `themes.json` (the `@soleone/theme` palettes in the terminal's shape, Gilt first) and `skin.css` (Geist around the terminal). Rebuild and redeploy the page to pick up changes.
+It brings `themes.json` (the `@soleone/theme` palettes in the terminal's shape, Gilt first), `skin.css` (Geist around the terminal) and `skin.js`, the `@soleone/theme-picker` ring in place of the page's dropdown (press T or the palette button). Rebuild and redeploy the page to pick up changes.
 
 ## Changing the kit
 
-- `registry/live/` holds the components and `registry.json` lists them. `pnpm build` regenerates `public/r/` and `terminal/themes.json` (from the published `@soleone/theme`, so new palettes there show up here). Commit both.
+- `registry/live/` holds the components and `registry.json` lists them. `pnpm build` regenerates `public/r/`, `terminal/themes.json` (from the published `@soleone/theme`, so new palettes there show up here) and `terminal/skin.js`. Commit them.
+- `picker/` builds `terminal/skin.js`: a small Vite + React app with `@soleone/theme-picker` installed from the registry like any app (`pnpm -C picker install`, then `pnpm dlx shadcn@latest add @soleone/theme-picker --overwrite` in `picker/` to update it). It has no Tailwind preflight, so it leaves the terminal page's own styles alone.
 - Components follow the apps' rules: theme tokens only, no raw colors.
 - Apps get changes when they run `shadcn add @live/<item> --overwrite`; terminal pages when they are rebuilt.

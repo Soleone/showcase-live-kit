@@ -3,8 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/terminal-themes.ts && shadcn build",
-    "check": "shadcn build && git diff --exit-code -- public/r terminal"
+    "build": "node scripts/terminal-themes.ts && shadcn build && pnpm -C picker build",
+    "check": "shadcn build && pnpm -C picker build && git diff --exit-code -- public/r terminal"
   },
   "devDependencies": {
     "shadcn": "^4.23.0"
